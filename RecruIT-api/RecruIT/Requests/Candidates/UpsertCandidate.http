@@ -1,0 +1,21 @@
+@id = dd74a50b-0dfb-4b62-b905-80d9d00efee8
+
+PUT http://localhost:5279/candidates/{{id}}
+Content-Type: application/json
+
+{
+    "name": "Gabasdasdasrres",
+    "cpf": "54322582001",
+    "age": 22,
+    "isActive": false,
+    "email": "atorres.gabriel@gmail.com",
+    "bio": "Hi, I'm Gabriel Torres, and I graduated from the University of New Mexico in 2015 with a degree in Computer Science. My interests are in Front End Engineering, and I love to create beautiful and performant products with delightful user experiences",
+    "skills": {
+        "Python": 2,
+        "Angular": 1
+    },
+    "links": [
+        "github.com/gabriel-torres3077",
+        "linkedin.com/in/gabriel-a-torres/"
+    ]
+}

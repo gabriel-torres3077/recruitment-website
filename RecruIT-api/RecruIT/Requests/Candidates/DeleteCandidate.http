@@ -1,0 +1,4 @@
+@id = dd74a50b-0dfb-4b62-b905-80d9d00efee8
+ Delete https://localhost:7141/Candidates/{{id}}
+ 
+

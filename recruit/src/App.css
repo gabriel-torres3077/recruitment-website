@@ -1,0 +1,39 @@
+.App {
+  background-color: #2f3137;
+  height: 100vh;
+}
+a{
+  text-decoration: none;
+}
+.App-header {
+background-color: #282c34;
+width: 100%;
+min-height: 105px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+font-size: calc(10px + 2vmin);
+color: white;
+}
+.logo{
+  margin-left: 2.5rem;
+  padding: 5px;
+  color: #61dafb;
+  font-size: calc(10px + 2vmin);
+}
+
+.links{
+  margin-right: 2.5rem;
+}
+.App-link {
+    margin: 0 2rem;
+    padding: 5px;
+    color: #61dafb;
+    background: linear-gradient(#282c34, #282c34 50%, #2ecc71 50%, #2ecc71);
+    background-size: 100% 200%;
+    transition: background 1s;
+  } 
+.App-link:hover{
+  background-position: 100% 100%;
+  color: white;
+}

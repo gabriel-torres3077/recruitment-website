@@ -1,0 +1,3 @@
+@id=dd74a50b-0dfb-4b62-b905-80d9d00efee8
+
+Get http://localhost:5279/candidates/{{id}}

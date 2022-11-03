@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecruIT.Contracts", "RecruIT.Contracts\RecruIT.Contracts.csproj", "{4A67B6E6-6298-4919-B9F8-3AF82748B71E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecruIT", "RecruIT\RecruIT.csproj", "{F44B9CC6-C888-4884-9D4A-9437FF549B55}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4A67B6E6-6298-4919-B9F8-3AF82748B71E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A67B6E6-6298-4919-B9F8-3AF82748B71E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A67B6E6-6298-4919-B9F8-3AF82748B71E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A67B6E6-6298-4919-B9F8-3AF82748B71E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F44B9CC6-C888-4884-9D4A-9437FF549B55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F44B9CC6-C888-4884-9D4A-9437FF549B55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F44B9CC6-C888-4884-9D4A-9437FF549B55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F44B9CC6-C888-4884-9D4A-9437FF549B55}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
