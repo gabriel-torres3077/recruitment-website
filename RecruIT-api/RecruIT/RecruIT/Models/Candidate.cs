@@ -1,3 +1,7 @@
+using RecruIT.Contracts.Candidates;
+using RecruIT.ServiceErrors;
+using ErrorOr;
+
 namespace RecruIT.Models;
 
 public class Candidate

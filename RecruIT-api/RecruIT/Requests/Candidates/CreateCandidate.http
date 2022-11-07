@@ -2,14 +2,14 @@ POST http://localhost:5279/candidates
 Content-Type: application/json
 
 {
-    "name": "teste Torres",
+    "name": "teste name",
     "cpf": "54322582001",
     "age": 22,
-    "email": "atorres.gabriel@gmail.com",
-    "bio": "Hi, I'm Gabriel Torres, and I graduated from the University of New Mexico in 2015 with a degree in Computer Science. My interests are in Front End Engineering, and I love to create beautiful and performant products with delightful user experiences",
+    "email": "email@gmail.com",
+    "bio": "Hi, I'm Test name, and I graduated from the University of New Mexico in 2015 with a degree in Computer Science. My interests are in Front End Engineering, and I love to create beautiful and performant products with delightful user experiences",
     "skills": {
         "Python": 2,
-        "Angular": 1
+        ".Net": 1
     },
     "links": [
         "github.com/gabriel-torres3077",

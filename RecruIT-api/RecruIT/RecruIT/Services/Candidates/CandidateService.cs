@@ -1,4 +1,6 @@
 using RecruIT.Models;
+using RecruIT.ServiceErrors;
+using ErrorOr;
 
 namespace RecruIT.Services.Candidates;
 
@@ -14,9 +16,13 @@ public class CandidateService : ICandidateService
     {
         _candidate.Remove(id);
     }
-    public Candidate GetCandidate(Guid id)
+    public ErrorOr<Candidate> GetCandidate(Guid id)
     {
-        return _candidate[id];
+        if (_candidate.TryGetValue(id, out var candidate))
+        {
+            return candidate;
+        }
+        return Errors.Candidate.NotFound;
     }
     public Dictionary<Guid, Candidate> GetAllCandidates()
     {

@@ -2,12 +2,12 @@ using RecruIT.Contracts.Candidates;
 using RecruIT.Models;
 using Microsoft.AspNetCore.Mvc;
 using RecruIT.Services.Candidates;
-
+using ErrorOr;
+using RecruIT.ServiceErrors;
 
 namespace RecruIT.Controllers;
-[ApiController]
-[Route("[controller]")]
-public class CandidatesController: ControllerBase
+
+public class CandidatesController: ApiController
 {
     private readonly ICandidateService _candidateService;
     public CandidatesController(ICandidateService candidateService)
@@ -58,9 +58,15 @@ public class CandidatesController: ControllerBase
     [HttpGet("{id:guid}")]
     public IActionResult GetCandidate(Guid id)
     {
-        Candidate candidate = _candidateService.GetCandidate(id);
+        ErrorOr<Candidate> getCandidateResult = _candidateService.GetCandidate(id);
 
-        var response = new CandidateResponse(
+        return getCandidateResult.Match(
+            candidate => Ok(MapCandidateResponse(candidate)),
+            errors => Problem(errors));
+    }
+    private static CandidateResponse MapCandidateResponse(Candidate candidate)
+    {
+        return new CandidateResponse(
             candidate.Id,
             candidate.Name,
             candidate.Cpf,
@@ -70,8 +76,7 @@ public class CandidatesController: ControllerBase
             candidate.Bio,
             candidate.Skills,
             candidate.Links
-        );
-        return Ok(response);
+        ); 
     }
     [HttpPut("{id:guid}")]
     public IActionResult UpsertCandidate(Guid id, UpsertCandidateRequest request)
